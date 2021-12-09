@@ -18,12 +18,12 @@ app.use("/api/*", (req, res) => {
   
 })
 
-app.listen(port, () => {
-  console.log(`Server is on port: ${port}`)
-})
-
 app.use("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build", "index.html"))
+})
+
+app.listen(port, () => {
+  console.log(`Server is on port: ${port}`)
 })
 
 
